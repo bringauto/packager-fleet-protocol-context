@@ -1,0 +1,44 @@
+{
+  "Env": {},
+  "DependsOn": [
+    "protobuf",
+    "fleet-protocol-interface",
+    "zlib",
+    "nlohmann-json",
+    "cxxopts",
+    "boost",
+    "ba-logger",
+    "pahomqttc",
+    "pahomqttcpp"
+  ],
+  "Git": {
+    "URI": "https://github.com/bringauto/module-gateway.git",
+    "Revision": "v1.3.1"
+  },
+  "Build": {
+    "CMake": {
+      "Defines": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BRINGAUTO_INSTALL": "ON",
+        "BRINGAUTO_PACKAGE": "ON",
+        "BRINGAUTO_SYSTEM_DEP": "ON",
+        "DBRINGAUTO_TESTS": "OFF"
+      }
+    }
+  },
+  "Package": {
+    "Name": "module-gateway",
+    "VersionTag": "v1.3.1",
+    "PlatformString": {
+      "Mode": "auto"
+    },
+    "IsLibrary": false,
+    "IsDevLib": false,
+    "IsDebug": true
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "fleet-os-2"
+    ]
+  }
+}

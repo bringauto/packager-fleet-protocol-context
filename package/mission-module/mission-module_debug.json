@@ -1,0 +1,39 @@
+{
+  "Env": {},
+  "DependsOn": [
+    "fleet-protocol-interface",
+    "fleet-protocol-cpp",
+    "protobuf",
+    "zlib"
+  ],
+  "Git": {
+    "URI": "https://github.com/bringauto/module-gateway.git",
+    "Revision": "v1.2.11"
+  },
+  "Build": {
+    "CMake": {
+      "Defines": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BRINGAUTO_INSTALL": "ON",
+        "BRINGAUTO_PACKAGE": "ON",
+        "BRINGAUTO_SYSTEM_DEP": "ON",
+        "DFLEET_PROTOCOL_BUILD_EXTERNAL_SERVER": "OFF"
+      }
+    }
+  },
+  "Package": {
+    "Name": "mission-module",
+    "VersionTag": "v1.2.11",
+    "PlatformString": {
+      "Mode": "auto"
+    },
+    "IsLibrary": true,
+    "IsDevLib": false,
+    "IsDebug": true
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "fleet-os-2"
+    ]
+  }
+}
