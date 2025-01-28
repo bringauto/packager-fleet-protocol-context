@@ -32,7 +32,9 @@
       "debian12",
       "ubuntu1804-aarch64",
       "ubuntu2404",
-      "fedora40"
+      "fedora40",
+      "fleet-os-2"
+
     ]
   }
 }
