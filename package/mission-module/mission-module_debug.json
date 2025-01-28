@@ -7,7 +7,7 @@
     "zlib"
   ],
   "Git": {
-    "URI": "https://github.com/bringauto/module-gateway.git",
+    "URI": "https://github.com/bringauto/mission-module.git",
     "Revision": "v1.2.11"
   },
   "Build": {
