@@ -3,13 +3,14 @@
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/bringauto/boost-cmake-build.git",
-    "Revision": "master"
+    "Revision": "arm-cross-compile"
   },
   "Build": {
     "CMake": {
       "Defines": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "BOOST_VERSION": "1.86.0"
+        "BOOST_VERSION": "1.86.0",
+        "WITHOUT_PYTHON": "ON"
       }
     }
   },
