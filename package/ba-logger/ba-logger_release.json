@@ -13,7 +13,8 @@
         "CMAKE_BUILD_TYPE": "Release",
         "LIB_TYPE": "SPDLOG",
         "BRINGAUTO_INSTALL": "ON",
-        "BRINGAUTO_SYSTEM_DEP": "ON"
+        "BRINGAUTO_SYSTEM_DEP": "ON",
+        "BRINGAUTO_PACKAGE": "ON"
       }
     }
   },

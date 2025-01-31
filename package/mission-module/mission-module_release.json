@@ -4,7 +4,10 @@
     "fleet-protocol-interface",
     "fleet-protocol-cpp",
     "protobuf",
-    "zlib"
+    "zlib",
+    "fleet-http-client-shared",
+    "boost",
+    "cpprestsdk"
   ],
   "Git": {
     "URI": "https://github.com/bringauto/mission-module.git",
