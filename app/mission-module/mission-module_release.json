@@ -1,17 +1,8 @@
 {
   "Env": {},
-  "DependsOn": [
-    "fleet-protocol-interface",
-    "fleet-protocol-cpp",
-    "protobuf",
-    "zlib",
-    "fleet-http-client-shared",
-    "boost",
-    "cpprestsdk"
-  ],
   "Git": {
     "URI": "https://github.com/bringauto/mission-module.git",
-    "Revision": "v1.2.11"
+    "Revision": "v1.2.12"
   },
   "Build": {
     "CMake": {
@@ -19,14 +10,14 @@
         "CMAKE_BUILD_TYPE": "Release",
         "BRINGAUTO_INSTALL": "ON",
         "BRINGAUTO_PACKAGE": "ON",
-        "BRINGAUTO_SYSTEM_DEP": "ON",
-        "FLEET_PROTOCOL_BUILD_EXTERNAL_SERVER": "OFF"
+        "BRINGAUTO_SYSTEM_DEP": "OFF",
+        "FLEET_PROTOCOL_BUILD_EXTERNAL_SERVER": "ON"
       }
     }
   },
   "Package": {
     "Name": "mission-module",
-    "VersionTag": "v1.2.11",
+    "VersionTag": "v1.2.12",
     "PlatformString": {
       "Mode": "auto"
     },
