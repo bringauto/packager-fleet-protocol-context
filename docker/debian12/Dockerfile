@@ -25,8 +25,8 @@ RUN wget "https://github.com/Kitware/CMake/releases/download/v3.25.2/cmake-3.25.
 
 RUN apt-get update && \
     apt-get purge -y \
-      wget && \
-      rm -rf /var/lib/apt/lists/*
+    wget && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/cmakelib/cmakelib.git /cmakelib
 RUN echo "export CMLIB_DIR=/cmakelib" >> /root/.bashrc && \

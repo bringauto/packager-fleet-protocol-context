@@ -1,33 +1,31 @@
 {
   "Env": {},
-  "DependsOn": [
-    "boost"
-  ],
   "Git": {
-    "URI": "https://github.com/msgpack/msgpack-c.git",
-    "Revision": "cpp-4.1.2"
+    "URI": "https://github.com/bringauto/io-module.git",
+    "Revision": "v1.3.2"
   },
   "Build": {
     "CMake": {
       "Defines": {
-        "CMAKE_BUILD_TYPE": "Release"
+        "CMAKE_BUILD_TYPE": "Release",
+        "BRINGAUTO_INSTALL": "ON"
       }
     }
   },
   "Package": {
-    "Name": "msgpack",
-    "VersionTag": "v4.1.2",
+    "Name": "io-module",
+    "VersionTag": "v1.3.2",
     "PlatformString": {
       "Mode": "auto"
     },
-    "IsLibrary": true,
-    "IsDevLib": true,
+    "IsLibrary": false,
+    "IsDevLib": false,
     "IsDebug": false
   },
   "DockerMatrix": {
     "ImageNames": [
-      "ubuntu2204",
       "fleet-os-2",
+      "ubuntu2204",
       "debian12",
       "ubuntu2404",
       "fedora40",

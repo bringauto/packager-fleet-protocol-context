@@ -1,4 +1,4 @@
-FROM debian:11.2
+FROM debian:12.0
 
 USER root
 RUN echo root:1234 | chpasswd
