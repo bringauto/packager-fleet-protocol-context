@@ -1,2 +1,2 @@
 Distributor ID:	fleet-os
-Release:	2
+Release:	3

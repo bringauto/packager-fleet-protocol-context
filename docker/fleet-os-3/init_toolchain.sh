@@ -6,9 +6,6 @@ INSTALL_DIR="$1"
 TOOLS_INSTALL_DIR="$2"
 TMP_DIR="/tmp/toolchain-install"
 
-TOOLS_PACKAGE_URI="https://github.com/bacpack-system/packager/releases/download/v1.0.0/bringauto-packager-tools_v1.0.0_x86-64-linux.zip"
-TOOLCHAIN_PACKAGE_URI="https://gitlab.bringauto.com/bringauto-public/fleet-os-toolchain/-/raw/add-v2.9.0/fleet-os/v2.9.1/fleet-os-toolchain_v2.9.1_raspberrypi4-64.zip?ref_type=heads"
-
 if [[ ${INSTALL_DIR} = "" ]]
 then
   echo "Specify toolchain absolute install dir path as a first argument!" >&2
@@ -26,6 +23,10 @@ then
   echo "Install dir '${INSTALL_DIR}' does not exist"
 fi
 
+
+
+TOOLS_PACKAGE_URI="https://github.com/bacpack-system/packager/releases/download/v1.0.0/bringauto-packager-tools_v1.0.0_x86-64-linux.zip"
+
 #
 # Install our BringAuto Fleet
 #
@@ -37,11 +38,15 @@ function install_toolchain() {
   mkdir -p "${TMP_DIR}"
 
   pushd "${TMP_DIR}"
-    wget ${TOOLCHAIN_PACKAGE_URI} \
-        -O "oecore.sh.zip"
+    local toolchain_pack="/root/toolchain/oecore.sh"
+    if ! [[ -f $toolchain_pack ]]
+    then
+      echo "Toolchain dir '${toolchain_pack}' DOES NOT exist" >&2
+      echo "Manually download Toolchain by download_toolchain.sh script located docker/fleet-os-3" >&2
+      exit 1
+    fi
 
-    unzip oecore.sh.zip
-    rm oecore.sh.zip
+    mv "${toolchain_pack}" .
 
     toolchain_installer="$(echo ./*)"
     chmod +x "${toolchain_installer}"
