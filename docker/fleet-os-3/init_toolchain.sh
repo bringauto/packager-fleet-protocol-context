@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 INSTALL_DIR="$1"
 TOOLS_INSTALL_DIR="$2"

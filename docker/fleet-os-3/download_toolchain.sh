@@ -6,10 +6,9 @@
 echo "DOES NOT WORK. DOWNLOAD MANUALLY BY CLICKING URI BELOW!" >&2
 echo "THEN UNZIP/UNTAR and copy toolchain as toolchain/oecore.sh" >&2
 
-set -e
+set -euo pipefail
 
-GITLAB_TOKEN="$1"
-SCRIPT_DIR="$(dirname $(realpath $0))"
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 FLEET_OS_VERSION="v3.0.0"
 
 #
