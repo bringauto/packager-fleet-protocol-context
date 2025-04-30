@@ -1,4 +1,4 @@
-FROM debian:12.0
+FROM debian:12.10
 
 USER root
 RUN echo root:1234 | chpasswd
@@ -18,10 +18,11 @@ RUN apt-get update && \
 RUN locale-gen en_US.UTF-8
 
 # Set environment variables for locale
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
 
+# Do we need it? It should be part of the toolchain
 RUN wget "https://github.com/Kitware/CMake/releases/download/v3.28.0/cmake-3.28.0-linux-x86_64.sh" -O cmake.sh && \
     chmod +x cmake.sh && \
     ./cmake.sh --skip-license --prefix=/usr/local && \
@@ -37,6 +38,7 @@ RUN mkdir -p /run/sshd
 # Install our BringAuto Fleet
 #
 COPY init_toolchain.sh /root/
+COPY toolchain/oecore.sh /root/toolchain/oecore.sh
 RUN chmod +x /root/init_toolchain.sh && \
     /root/init_toolchain.sh /root/toolchain /root/tools
 COPY lsb_release.txt /root/tools/
