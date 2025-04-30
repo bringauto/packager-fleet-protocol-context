@@ -1,6 +1,6 @@
-# BringAuto Package Example Context Directory
+# BringAuto Package Context Directory
 
-This context directory is used for generating packages for Fleet Protocol.
+This Context directory is used for generating Packages for Fleet Protocol. It is a component of [BacPack system](https://github.com/bacpack-system). The build of Packages is done by [Packager](https://github.com/bacpack-system/packager) and the built Packages are stored in this [Package Repository](https://gitea.bringauto.com/fleet-protocol/package-repository).
 
 ## Helper Scripts
 
