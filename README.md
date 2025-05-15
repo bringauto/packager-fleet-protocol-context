@@ -6,4 +6,4 @@ This Context directory is used for generating Packages for Fleet Protocol. It is
 
 - **`add_docker_to_matrix.sh`** - Adds a new Docker image to all package JSON files in the context directory. In the example, it adds the `ubuntu2310` Docker image to all package JSON files.
 
-- **`change_docker_name.sh`** - Changes the Docker image name in all package JSON files in the context directory. In the example, it changes `fleet-os` to `fleet-os-2`.
+- **`change_docker_name.sh`** - Changes the Docker image name in all package JSON files in the context directory. In the example, it changes `fleet-os-2` to `fleet-os-3`.

@@ -27,7 +27,7 @@
   },
   "DockerMatrix": {
     "ImageNames": [
-      "fleet-os-2"
+      "fleet-os-3"
     ]
   }
 }

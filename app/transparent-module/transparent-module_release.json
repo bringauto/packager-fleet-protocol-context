@@ -1,25 +1,26 @@
 {
   "Env": {},
   "Git": {
-    "URI": "https://github.com/bringauto/mosquitto.git",
-    "Revision": "bringauto-v2.0.21"
+    "URI": "https://github.com/bringauto/transparent-module.git",
+    "Revision": "v1.0.2"
   },
   "Build": {
     "CMake": {
       "Defines": {
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_BUILD_TYPE": "Release",
+        "BRINGAUTO_INSTALL": "ON"
       }
     }
   },
   "Package": {
-    "Name": "mosquitto",
-    "VersionTag": "v2.0.21",
+    "Name": "transparent-module",
+    "VersionTag": "v1.0.2",
     "PlatformString": {
       "Mode": "auto"
     },
     "IsLibrary": false,
     "IsDevLib": false,
-    "IsDebug": true
+    "IsDebug": false
   },
   "DockerMatrix": {
     "ImageNames": [

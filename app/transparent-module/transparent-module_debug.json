@@ -1,8 +1,8 @@
 {
   "Env": {},
   "Git": {
-    "URI": "https://github.com/bringauto/io-module.git",
-    "Revision": "v1.3.2"
+    "URI": "https://github.com/bringauto/transparent-module.git",
+    "Revision": "v1.0.2"
   },
   "Build": {
     "CMake": {
@@ -13,8 +13,8 @@
     }
   },
   "Package": {
-    "Name": "io-module",
-    "VersionTag": "v1.3.2",
+    "Name": "transparent-module",
+    "VersionTag": "v1.0.2",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -24,12 +24,7 @@
   },
   "DockerMatrix": {
     "ImageNames": [
-      "fleet-os-3",
-      "ubuntu2204",
-      "debian12",
-      "ubuntu2404",
-      "fedora40",
-      "fedora41"
+      "fleet-os-3"
     ]
   }
 }
