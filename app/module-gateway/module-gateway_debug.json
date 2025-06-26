@@ -26,6 +26,8 @@
     "IsDebug": true
   },
   "DockerMatrix": {
-    "ImageNames": []
+    "ImageNames": [
+      "fleet-os-3"
+    ]
   }
 }

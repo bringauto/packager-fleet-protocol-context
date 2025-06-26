@@ -1,5 +1,8 @@
 {
-  "Env": {},
+  "Env": {
+    "CFLAGS": "-std=c++20",
+    "CXXFLAGS": "-std=c++20"
+  },
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/eclipse/paho.mqtt.c.git",
@@ -34,7 +37,8 @@
       "debian12",
       "ubuntu2404",
       "fedora40",
-      "fedora41"
+      "fedora41",
+      "fedora42"
     ]
   }
 }
