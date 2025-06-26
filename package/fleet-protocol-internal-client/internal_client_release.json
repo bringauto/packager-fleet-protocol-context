@@ -35,6 +35,7 @@
       "debian12",
       "ubuntu1804-aarch64",
       "ubuntu2404",
+      "fleet-os-3",
       "fedora40",
       "fedora41"
     ]
