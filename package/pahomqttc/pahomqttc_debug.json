@@ -1,7 +1,5 @@
 {
   "Env": {
-    "CFLAGS": "-std=c11",
-    "CXXFLAGS": "-std=c11"
   },
   "DependsOn": [],
   "Git": {
@@ -16,7 +14,10 @@
         "PAHO_BUILD_SHARED": "ON",
         "PAHO_BUILD_DOCUMENTATION": "OFF",
         "PAHO_BUILD_SAMPLES": "OFF",
-        "PAHO_WITH_SSL": "ON"
+        "PAHO_WITH_SSL": "ON",
+        "PAHO_ENABLE_TESTING": "OFF",
+        "CMAKE_C_STANDARD": "11",
+        "CMAKE_C_STANDARD_REQUIRED": "ON"
       }
     }
   },
