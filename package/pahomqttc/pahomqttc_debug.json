@@ -9,7 +9,7 @@
   "Build": {
     "CMake": {
       "Defines": {
-        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_BUILD_TYPE": "Debug",
         "PAHO_BUILD_STATIC": "OFF",
         "PAHO_BUILD_SHARED": "ON",
         "PAHO_BUILD_DOCUMENTATION": "OFF",
@@ -29,7 +29,7 @@
     },
     "IsLibrary": true,
     "IsDevLib": true,
-    "IsDebug": false
+    "IsDebug": true
   },
   "DockerMatrix": {
     "ImageNames": [
