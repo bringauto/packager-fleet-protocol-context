@@ -1,11 +1,12 @@
 {
-  "Env": {},
+  "Env": {
+  },
   "DependsOn": [
     "pahomqttc"
   ],
   "Git": {
     "URI": "https://github.com/eclipse/paho.mqtt.cpp.git",
-    "Revision": "v1.2.0"
+    "Revision": "v1.3.2"
   },
   "Build": {
     "CMake": {
@@ -16,14 +17,15 @@
         "PAHO_BUILD_DOCUMENTATION": "OFF",
         "PAHO_BUILD_SAMPLES": "OFF",
         "PAHO_WITH_SSL": "ON",
+        "PAHO_ENABLE_TESTING": "OFF",
         "CMAKE_CXX_STANDARD": "20",
-        "CMAKE_CXX_STANDARD_REQUIRED": "OFF"
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON"
       }
     }
   },
   "Package": {
     "Name": "pahomqttcpp",
-    "VersionTag": "v1.2.0",
+    "VersionTag": "v1.3.2",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -38,7 +40,8 @@
       "debian12",
       "ubuntu2404",
       "fedora40",
-      "fedora41"
+      "fedora41",
+      "fedora42"
     ]
   }
 }

@@ -1,5 +1,6 @@
 {
-  "Env": {},
+  "Env": {
+  },
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/eclipse/paho.mqtt.c.git",
@@ -8,12 +9,15 @@
   "Build": {
     "CMake": {
       "Defines": {
-        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_BUILD_TYPE": "Debug",
         "PAHO_BUILD_STATIC": "OFF",
         "PAHO_BUILD_SHARED": "ON",
         "PAHO_BUILD_DOCUMENTATION": "OFF",
         "PAHO_BUILD_SAMPLES": "OFF",
-        "PAHO_WITH_SSL": "ON"
+        "PAHO_WITH_SSL": "ON",
+        "PAHO_ENABLE_TESTING": "OFF",
+        "CMAKE_C_STANDARD": "11",
+        "CMAKE_C_STANDARD_REQUIRED": "ON"
       }
     }
   },
@@ -25,7 +29,7 @@
     },
     "IsLibrary": true,
     "IsDevLib": true,
-    "IsDebug": false
+    "IsDebug": true
   },
   "DockerMatrix": {
     "ImageNames": [
@@ -34,7 +38,8 @@
       "debian12",
       "ubuntu2404",
       "fedora40",
-      "fedora41"
+      "fedora41",
+      "fedora42"
     ]
   }
 }
