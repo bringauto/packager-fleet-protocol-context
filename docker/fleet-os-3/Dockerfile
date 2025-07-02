@@ -32,7 +32,8 @@ RUN mkdir -p cmakelib && cd cmakelib &&\
     git clone https://github.com/cmakelib/cmakelib.git /cmakelib/cmakelib && \
     git clone -b jan_kubalek/remove_lsbrelease_again https://github.com/cmakelib/cmakelib-component-cmdef.git /cmakelib/cmakelib-component-cmdef && \
     git clone https://github.com/cmakelib/cmakelib-component-storage.git /cmakelib/cmakelib-component-storage && \
-    git clone https://github.com/cmakelib/cmakelib-component-cmutil.git /cmakelib/cmakelib-component-cmutil && \
+    git clone https://github.com/cmakelib/cmakelib-component-cmutil.git /cmakelib/cmakelib-component-cmutil
+
 RUN echo "export CMLIB_DIR=/cmakelib/cmakelib" >> /environment.sh
 RUN echo "export CMLIB_COMPONENT_LOCAL_BASE_PATH=/cmakelib" >> /environment.sh
 
