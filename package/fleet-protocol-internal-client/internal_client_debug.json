@@ -7,7 +7,7 @@
   ],
   "Git": {
     "URI": "https://github.com/bringauto/internal-client-cpp.git",
-    "Revision": "v1.1.1"
+    "Revision": "v1.1.3"
   },
   "Build": {
     "CMake": {
@@ -21,7 +21,7 @@
   },
   "Package": {
     "Name": "fleet-protocol-internal-client",
-    "VersionTag": "v1.1.1",
+    "VersionTag": "v1.1.3",
     "PlatformString": {
       "Mode": "auto"
     },
