@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/bringauto/module-gateway.git",
-    "Revision": "v1.3.3"
+    "Revision": "v1.3.5"
   },
   "Build": {
     "CMake": {
@@ -17,7 +17,7 @@
   },
   "Package": {
     "Name": "module-gateway",
-    "VersionTag": "v1.3.3",
+    "VersionTag": "v1.3.5",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -27,7 +27,6 @@
   },
   "DockerMatrix": {
     "ImageNames": [
-      "fleet-os-3"
     ]
   }
 }
