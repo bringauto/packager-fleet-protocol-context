@@ -18,6 +18,11 @@ RUN wget "https://github.com/Kitware/CMake/releases/download/v3.28.0/cmake-3.28.
 RUN git clone https://github.com/cmakelib/cmakelib.git /cmakelib
 RUN echo "export CMLIB_DIR=/cmakelib" >> /root/.bashrc
 
+# Install Fleet Protocol's CMCONF system
+COPY --from=package-context config/CMCONF_FLEET_PROTOCOLConfig.cmake /etc
+ENV CMLIB_DIR=/cmakelib
+RUN cmake -DCMCONF_INSTALL_AS_SYMLINK=ON -P /etc/CMCONF_FLEET_PROTOCOLConfig.cmake
+
 RUN sed -ri 's/#?PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN mkdir -p /run/sshd
 
