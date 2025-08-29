@@ -1,11 +1,11 @@
 
 # FLEET_PROTOCOL System Configuration
 
-This directory contains configuration file for FLEET_PROTOCOL [CMCONF] system. It is used to set
+This directory contains the configuration file for FLEET_PROTOCOL [CMCONF] system. It is used to set
 required variables for [Package Tracker]. The most important variable is
-`FLEET_PROTOCOL_PACKAGE_REPOSITORY`, which sets uri of Package Repository used during builds.
+`BA_PACKAGE_URI_TEMPLATE_REMOTE`, which sets URI of Package Repository used during builds.
 
-This system must be installed to all Docker images. The [Packager]
+This system must be installed in all Docker images.
 
 More information about this system can be found in [Package Tracker Example].
 
