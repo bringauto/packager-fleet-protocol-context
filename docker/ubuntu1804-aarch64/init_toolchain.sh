@@ -5,7 +5,7 @@ set -e
 TOOLS_INSTALL_DIR="$1"
 TMP_DIR="/tmp/toolchain-install"
 
-TOOLS_PACKAGE_URI="https://github.com/bringauto/packager/releases/download/v0.3.2/bringauto-packager-tools_v0.3.2_x86-64-linux.zip"
+TOOLS_PACKAGE_URI="https://github.com/bacpack-system/packager-tools/releases/download/v1.0.0/bringauto-packager-tools_v1.0.0_x86-64-linux.zip"
 
 if [[ ${TOOLS_INSTALL_DIR} = "" ]]
 then
@@ -32,7 +32,6 @@ function install_tools() {
   popd
   rm -r "${TMP_DIR}"
 
-  chmod +x "${TOOLS_INSTALL_DIR}/lsb_release"
   chmod +x "${TOOLS_INSTALL_DIR}/uname"
   TMP_PATH=$PATH
   echo 'PATH='"${TOOLS_INSTALL_DIR}"'/:'"${TMP_PATH}"'' >> /root/.ssh/environment

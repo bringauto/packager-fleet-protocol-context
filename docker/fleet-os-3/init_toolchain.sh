@@ -25,7 +25,7 @@ fi
 
 
 
-TOOLS_PACKAGE_URI="https://github.com/bacpack-system/packager/releases/download/v1.0.0/bringauto-packager-tools_v1.0.0_x86-64-linux.zip"
+TOOLS_PACKAGE_URI="https://github.com/bacpack-system/packager-tools/releases/download/v1.0.0/bringauto-packager-tools_v1.0.0_x86-64-linux.zip"
 
 #
 # Install our BringAuto Fleet
@@ -84,7 +84,6 @@ function install_tools() {
   popd
   rm -r "${TMP_DIR}"
 
-  chmod +x "${TOOLS_INSTALL_DIR}/lsb_release"
   chmod +x "${TOOLS_INSTALL_DIR}/uname"
   echo 'PATH='"${TOOLS_INSTALL_DIR}"'/:$PATH' >> /root/.bashrc
 }
