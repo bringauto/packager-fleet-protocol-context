@@ -21,7 +21,7 @@
     "PlatformString": {
       "Mode": "auto"
     },
-    "IsLibrary": true,
+    "IsLibrary": false,
     "IsDevLib": false,
     "IsDebug": false
   },
