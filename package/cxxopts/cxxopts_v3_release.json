@@ -3,7 +3,7 @@
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/jarro2783/cxxopts.git",
-    "Revision": "v3.1.0"
+    "Revision": "v3.1.1"
   },
   "Build": {
     "CMake": {
@@ -16,7 +16,7 @@
   },
   "Package": {
     "Name": "cxxopts",
-    "VersionTag": "v3.1.0",
+    "VersionTag": "v3.1.1",
     "PlatformString": {
       "Mode": "auto"
     },
