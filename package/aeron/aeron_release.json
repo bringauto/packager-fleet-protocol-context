@@ -1,0 +1,41 @@
+{
+  "Env": {},
+  "Git": {
+    "URI": "https://github.com/aeron-io/aeron.git",
+    "Revision": "1.48.6"
+  },
+  "Build": {
+    "CMake": {
+      "Defines": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "STANDALONE_BUILD": "ON",
+        "AERON_BUILD_SAMPLES": "OFF",
+        "AERON_TESTS": "OFF",
+        "AERON_SYSTEM_TESTS": "OFF",
+        "AERON_UNIT_TESTS": "OFF",
+        "BUILD_AERON_DRIVER": "ON"
+      }
+    }
+  },
+  "Package": {
+    "Name": "aeron",
+    "VersionTag": "v1.48.6",
+    "PlatformString": {
+      "Mode": "auto"
+    },
+    "IsLibrary": true,
+    "IsDevLib": true,
+    "IsDebug": false
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "ubuntu2204",
+      "fleet-os-3",
+      "debian12",
+      "ubuntu2404",
+      "ubuntu2504",
+      "fedora41",
+      "fedora42"
+    ]
+  }
+}

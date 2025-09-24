@@ -8,6 +8,13 @@ RUN apt-get update && \
     binutils build-essential flex git libssl-dev lsb-release make openssh-server patchelf software-properties-common wget && \
     rm -rf /var/lib/apt/lists/*
 
+# Java is needed for build of some tools.
+# For example: Processing Aeron mapping files
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        default-jdk && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN git clone --depth=1 --single-branch --branch=releases/gcc-13.2.0 https://gcc.gnu.org/git/gcc.git /gcc && \
     cd /gcc && \
     contrib/download_prerequisites && \

@@ -8,6 +8,13 @@ RUN apt-get update && \
       	coreutils lsb-release build-essential  openssh-server git libssl-dev wget patchelf && \
     rm -rf /var/lib/apt/lists/*
 
+# Java is needed for build of some tools.
+# For example: Processing Aeron mapping files
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        default-jdk && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN wget "https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh" -O cmake.sh && \
     chmod +x cmake.sh && \
     ./cmake.sh --skip-license --prefix=/usr/local && \

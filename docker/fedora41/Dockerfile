@@ -8,6 +8,12 @@ RUN dnf -y update && \
     automake binutils gcc gcc-c++ git kernel-devel lsb-release make openssh-server openssl-devel patchelf wget \
     && dnf clean all
 
+# Java is needed for build of some tools.
+# For example: Processing Aeron mapping files
+RUN dnf -y update && \
+    dnf -y install java-latest-openjdk java-latest-openjdk-devel \
+    && dnf clean all
+
 RUN wget "https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.3-linux-x86_64.sh" -O cmake.sh && \
     chmod +x cmake.sh && \
     ./cmake.sh --skip-license --prefix=/usr/local && \

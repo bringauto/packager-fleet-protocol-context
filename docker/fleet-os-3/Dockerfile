@@ -14,6 +14,13 @@ RUN apt-get update && \
       findutils && \
     rm -rf /var/lib/apt/lists/*
 
+# Java is needed for build of some tools.
+# For example: Processing Aeron mapping files
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        default-jdk && \
+    rm -rf /var/lib/apt/lists/*
+
 # Generate the locale for en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 
