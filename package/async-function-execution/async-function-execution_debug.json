@@ -1,8 +1,8 @@
 {
   "Env": {},
   "DependsOn": [
-	"aeron",
-	"nlohmann-json"
+    "aeron",
+    "nlohmann-json"
   ],
   "Git": {
     "URI": "https://github.com/bringauto/async-function-execution.git",
