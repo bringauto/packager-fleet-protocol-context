@@ -14,6 +14,13 @@ RUN apt-get update && \
       findutils && \
     rm -rf /var/lib/apt/lists/*
 
+# Java is needed for build of some tools.
+# For example: Processing Aeron mapping files
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        default-jdk && \
+    rm -rf /var/lib/apt/lists/*
+
 # Generate the locale for en_US.UTF-8
 RUN locale-gen en_US.UTF-8
 
@@ -23,7 +30,7 @@ ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
 
 # Do we need it? It should be part of the toolchain
-RUN wget "https://github.com/Kitware/CMake/releases/download/v3.28.0/cmake-3.28.0-linux-x86_64.sh" -O cmake.sh && \
+RUN wget "https://github.com/Kitware/CMake/releases/download/v3.31.8/cmake-3.31.8-linux-x86_64.sh" -O cmake.sh && \
     chmod +x cmake.sh && \
     ./cmake.sh --skip-license --prefix=/usr/local && \
     rm ./cmake.sh
