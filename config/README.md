@@ -1,16 +1,16 @@
 
 # FLEET_PROTOCOL System Configuration
 
-This directory contains the configuration file for FLEET_PROTOCOL [CMCONF] system. It is used to set
+This directory contains the configuration file for the FLEET_PROTOCOL system. It is used to set
 required variables for [Package Tracker]. The most important variable is
-`BA_PACKAGE_URI_TEMPLATE_REMOTE`, which sets URI of Package Repository used during builds.
+`BA_PACKAGE_URI_TEMPLATE_REMOTE`, which sets the URI template of the Package Repository used during builds.
 
-This system must be installed in all Docker images.
+Configuration is in the format of [CMCONF] configuration.
 
-More information about this system can be found in [Package Tracker Example].
-
+For "how to install configuration", refer to [Package Tracker Example].
 
 [Packager]: https://github.com/bacpack-system/packager
 [Package Tracker]: https://github.com/bacpack-system/package-tracker
 [Package Tracker Example]: https://github.com/bacpack-system/package-tracker/tree/master/example
 [CMCONF]: https://github.com/cmakelib/cmakelib-component-cmconf
+[Fleet Protocol]: https://github.com/bringauto/fleet-protocol
