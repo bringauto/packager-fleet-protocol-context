@@ -1,9 +1,9 @@
 {
   "Env": {},
   "DependsOn": [
-    "fleet-protocol-interface",
     "aeron",
-    "async-function-execution"
+    "async-function-execution",
+    "fleet-protocol-interface"
   ],
   "Git": {
     "URI": "https://github.com/bringauto/fleet-protocol-cpp.git",
