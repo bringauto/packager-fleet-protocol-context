@@ -1,0 +1,112 @@
+{
+  "host_system": {
+    "cache_path": "/srv/cache_disk//yocto/",
+    "yocto_folder": "/home/bringauto/agent/work/167522160ec14770/src/fleet-os/base_build",
+    "thread_limit": {
+      "active": true,
+      "bitbake_limit": 40,
+      "make_limit": 8
+    }
+  },
+  "system": {
+    "machine": "ba-raspberrypi4-64",
+    "hostname": "devbuild-bringautopi-test",
+    "static_ip": {
+      "active": false,
+      "ipv4": "x.x.x.x",
+      "netmask": "x.x.x.x",
+      "gateway": "x.x.x.x",
+      "dns": "x.x.x.x"
+    },
+    "ba_dependencies": false
+  },
+  "targets": {
+    "bringauto_configuration": {
+      "active": false,
+      "target_name": "default",
+      "branch": "TeamCity"
+    },
+    "module_gateway": {
+      "active": false,
+      "git_tag": "v1.1.13"
+    },
+    "virtual_vehicle": {
+      "active": false,
+      "git_tag": "v3.1.5"
+    },
+    "ssh_tunnel": {
+      "active": false,
+      "ssh_tunnel_git_branch": "deploy_development"
+    },
+    "wireguard": {
+      "active": true,
+      "wireguard_git_branch": "test"
+    },
+    "watchdog": {
+      "active": false
+    },
+    "golem": {
+      "active": false
+    },
+    "green_button": {
+      "active": false
+    },
+    "ba_rpi_tester": {
+      "active": false
+    }
+  },
+  "output": {
+    "compress": true,
+    "bootloader": {
+      "generate": true
+    },
+    "rootfs": [
+      {
+        "name": "bringauto-image-minimal",
+        "generate": true
+      },
+      {
+        "name": "bringauto-image-compile",
+        "generate": true
+      },
+      {
+        "name": "bringauto-image-debug",
+        "generate": false
+      }
+    ],
+    "bundles": [
+      {
+        "name": "bringauto-bundle-minimal",
+        "generate": true
+      },
+      {
+        "name": "bringauto-bundle-compile",
+        "generate": true
+      },
+      {
+        "name": "bringauto-bundle-debug",
+        "generate": true
+      }
+    ],
+    "toolchains": [
+      {
+        "name": "bringauto-image-minimal",
+        "generate": false
+      },
+      {
+        "name": "bringauto-image-compile",
+        "generate": true
+      },
+      {
+        "name": "bringauto-image-debug",
+        "generate": false
+      }
+    ]
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "ubuntu1804",
+      "ubuntu1804"
+    ]
+  }
+}

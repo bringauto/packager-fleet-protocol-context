@@ -23,7 +23,9 @@
   },
   "DockerMatrix": {
     "ImageNames": [
-      "fleet-os-3"
+      "fleet-os-3",
+      "ubuntu1804",
+      "ubuntu1804"
     ]
   }
 }

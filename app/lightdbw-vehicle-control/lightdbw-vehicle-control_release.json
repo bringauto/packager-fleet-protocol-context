@@ -1,35 +1,25 @@
 {
   "Env": {},
-  "DependsOn": [
-    "boost",
-    "protozero",
-    "bzip2",
-    "zlib",
-    "expat",
-    "lz4"
-  ],
   "Git": {
-    "URI": "https://github.com/osmcode/libosmium.git",
-    "Revision": "v2.17.3"
+    "URI": "https://oauth2:glpat-J7PrW2SI20joymh_SOQnXG86MQp1OjYH.01.0w1i5v7qa@gitlab.bringauto.com/bring-auto/hardware/lightdbw-vehicle-control.git",
+    "Revision": "1211b2aabb02fa1aa1c004345b977616c391865b"
   },
   "Build": {
     "CMake": {
       "Defines": {
         "CMAKE_BUILD_TYPE": "Release",
-        "BUILD_DATA_TESTS": "OFF",
-        "BUILD_EXAMPLES": "OFF",
-        "BUILD_TESTING": "OFF"
+        "BRINGAUTO_INSTALL": "ON"
       }
     }
   },
   "Package": {
-    "Name": "osmium",
-    "VersionTag": "v2.17.3",
+    "Name": "lightdbw-vehicle-control",
+    "VersionTag": "v1.0",
     "PlatformString": {
       "Mode": "auto"
     },
-    "IsLibrary": true,
-    "IsDevLib": true,
+    "IsLibrary": false,
+    "IsDevLib": false,
     "IsDebug": false
   },
   "DockerMatrix": {
@@ -40,7 +30,6 @@
       "ubuntu2404",
       "fedora40",
       "fedora41",
-      "fedora42",
       "ubuntu1804",
       "ubuntu1804"
     ]

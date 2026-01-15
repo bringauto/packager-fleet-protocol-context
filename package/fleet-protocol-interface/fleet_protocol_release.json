@@ -35,7 +35,9 @@
       "fedora40",
       "fleet-os-3",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "ubuntu1804",
+      "ubuntu1804"
     ]
   }
 }

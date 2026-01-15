@@ -7,7 +7,7 @@
   ],
   "Git": {
     "URI": "https://github.com/bringauto/internal-client-cpp.git",
-    "Revision": "v1.1.3"
+    "Revision": "7af777d7d0e568d30c09f0bb10697953e93261b2"
   },
   "Build": {
     "CMake": {
@@ -21,7 +21,7 @@
   },
   "Package": {
     "Name": "fleet-protocol-internal-client",
-    "VersionTag": "v1.1.3",
+    "VersionTag": "v1.1.4",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -37,7 +37,9 @@
       "ubuntu2404",
       "fedora40",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "ubuntu1804",
+      "ubuntu1804"
     ]
   }
 }

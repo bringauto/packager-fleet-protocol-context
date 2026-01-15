@@ -28,7 +28,9 @@
   "DockerMatrix": {
     "ImageNames": [
       "fleet-os-3",
-      "fedora40"
+      "fedora40",
+      "ubuntu1804",
+      "ubuntu1804"
     ]
   }
 }

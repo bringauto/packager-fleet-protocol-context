@@ -37,9 +37,13 @@ RUN wget "https://github.com/Kitware/CMake/releases/download/v3.31.8/cmake-3.31.
 
 RUN git clone https://github.com/cmakelib/cmakelib.git /cmakelib
 RUN echo "export CMLIB_DIR=/cmakelib" >> /environment.sh
+RUN echo "source /environment.sh" >> /etc/profile
+
 
 RUN sed -ri 's/#?PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN mkdir -p /run/sshd
+
+RUN mkdir -p /root/.ssh && ssh-keyscan -p 1999 gitlab.bringauto.com >> /root/.ssh/known_host
 
 #
 # Install our BringAuto Fleet
