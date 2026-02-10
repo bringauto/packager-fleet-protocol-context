@@ -13,7 +13,8 @@
         "AERON_TESTS": "OFF",
         "AERON_SYSTEM_TESTS": "OFF",
         "AERON_UNIT_TESTS": "OFF",
-        "BUILD_AERON_DRIVER": "ON"
+        "BUILD_AERON_DRIVER": "ON",
+        "BUILD_AERON_ARCHIVE_API": "OFF"
       }
     }
   },

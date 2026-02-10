@@ -1,11 +1,13 @@
 {
   "Env": {},
   "DependsOn": [
-    "fleet-protocol-interface"
+    "fleet-protocol-interface",
+    "aeron",
+    "async-function-execution"
   ],
   "Git": {
     "URI": "https://github.com/bringauto/fleet-protocol-cpp.git",
-    "Revision": "v1.1.1"
+    "Revision": "v1.2.0"
   },
   "Build": {
     "CMake": {
@@ -20,7 +22,7 @@
   },
   "Package": {
     "Name": "fleet-protocol-cpp",
-    "VersionTag": "v1.1.1",
+    "VersionTag": "v1.2.0",
     "PlatformString": {
       "Mode": "auto"
     },
