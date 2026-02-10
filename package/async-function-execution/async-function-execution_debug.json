@@ -6,7 +6,7 @@
   ],
   "Git": {
     "URI": "https://github.com/bringauto/async-function-execution.git",
-    "Revision": "v0.1.0"
+    "Revision": "v1.0.0"
   },
   "Build": {
     "CMake": {
@@ -22,7 +22,7 @@
   },
   "Package": {
     "Name": "async-function-execution",
-    "VersionTag": "v0.1.0",
+    "VersionTag": "v1.0.0",
     "PlatformString": {
       "Mode": "auto"
     },
