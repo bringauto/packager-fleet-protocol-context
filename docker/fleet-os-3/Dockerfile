@@ -29,7 +29,7 @@ ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
 
-# Do we need it? It should be part of the toolchain
+# Toolchain installs version 3.28 but aeron requires > 3.30
 RUN wget "https://github.com/Kitware/CMake/releases/download/v3.31.8/cmake-3.31.8-linux-x86_64.sh" -O cmake.sh && \
     chmod +x cmake.sh && \
     ./cmake.sh --skip-license --prefix=/usr/local && \
@@ -60,5 +60,8 @@ RUN apt-get update && \
     apt-get purge -y \
       wget unzip && \
       rm -rf /var/lib/apt/lists/*
+
+# Temporary until toolchain cmake is version > 3.30
+RUN echo "alias cmake='/usr/local/bin/cmake'" >> /root/.bashrc
 
 ENTRYPOINT ["/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]
