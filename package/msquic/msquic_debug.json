@@ -1,0 +1,38 @@
+{
+  "Env": {},
+  "Git": {
+    "URI": "https://github.com/microsoft/msquic.git",
+    "Revision": "v2.5.6"
+  },
+  "Build": {
+    "CMake": {
+      "Defines": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "QUIC_BUILD_TOOLS": "OFF",
+        "QUIC_BUILD_TEST": "OFF",
+        "QUIC_BUILD_PERF": "OFF"
+      }
+    }
+  },
+  "Package": {
+    "Name": "msquic",
+    "VersionTag": "v2.5.6",
+    "PlatformString": {
+      "Mode": "auto"
+    },
+    "IsLibrary": true,
+    "IsDevLib": true,
+    "IsDebug": true
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "ubuntu2204",
+      "fleet-os-3",
+      "debian12",
+      "ubuntu2404",
+      "ubuntu2504",
+      "fedora41",
+      "fedora42"
+    ]
+  }
+}
