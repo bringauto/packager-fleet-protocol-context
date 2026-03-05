@@ -64,4 +64,26 @@ RUN apt-get update && \
 # Temporary until toolchain cmake is version > 3.30
 RUN echo "alias cmake='/usr/local/bin/cmake'" >> /root/.bashrc
 
+# The yocto toolchain Perl (5.38.2) is stripped and missing standard modules needed by
+# msquic's bundled quictls (OpenSSL fork). Replace the toolchain's perl wrapper with a
+# thin shell that invokes the system Perl (/usr/bin/perl), which has all standard modules.
+# The toolchain perl binary is only used for build-time scripts (not for the target binary),
+# so using system Perl here is safe.
+RUN printf '#!/bin/sh\nexec /usr/bin/perl "$@"\n' \
+      > /root/toolchain/sysroots/x86_64-oesdk-linux/usr/bin/perl && \
+    chmod +x /root/toolchain/sysroots/x86_64-oesdk-linux/usr/bin/perl
+# CROSS_COMPILE is set by the OE SDK toolchain for Makefile-based projects (Linux kernel,
+# U-Boot). CMake projects use CMAKE_TOOLCHAIN_FILE for cross-compilation instead.
+# When CROSS_COMPILE is set, quictls (OpenSSL fork used by msquic) incorrectly prepends
+# it to the already-absolute CC path, producing a non-existent compiler path.
+# This line is appended AFTER init_toolchain.sh so it overrides the SDK's export.
+RUN echo "unset CROSS_COMPILE" >> /environment.sh
+
+# msquic's cmake checks CMAKE_TARGET_ARCHITECTURE to select the quictls build path.
+# Without it, msquic falls back to ./config which auto-detects the x86_64 host and
+# passes -m64 to the aarch64 cross-compiler. Setting arm64 makes msquic call
+# quictls/Configure linux-aarch64 directly, which uses CC from the environment.
+RUN echo "set(CMAKE_TARGET_ARCHITECTURE arm64)" >> \
+    /root/toolchain/sysroots/x86_64-oesdk-linux/usr/share/cmake/OEToolchainConfig.cmake
+
 ENTRYPOINT ["/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]

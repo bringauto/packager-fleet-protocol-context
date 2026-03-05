@@ -5,7 +5,7 @@ RUN echo root:1234 | chpasswd
 
 RUN dnf -y update && \
     dnf -y install  \
-    automake binutils gcc gcc-c++ git kernel-devel lsb-release make openssh-server openssl-devel patchelf wget \
+    automake binutils gcc gcc-c++ git kernel-devel lsb-release make openssh-server openssl-devel patchelf perl-FindBin perl-IPC-Cmd wget \
     && dnf clean all
 
 # Java is needed for build of some tools.
