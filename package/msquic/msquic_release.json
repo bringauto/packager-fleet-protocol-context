@@ -1,5 +1,6 @@
 {
   "Env": {},
+  "DependsOn": [ "numactl" ],
   "Git": {
     "URI": "https://github.com/microsoft/msquic.git",
     "Revision": "v2.5.6"

@@ -1,0 +1,30 @@
+{
+  "Env": {},
+  "Git": {
+    "URI": "https://github.com/bringauto/numa-cmake-build.git",
+    "Revision": "init"
+  },
+  "Build": {
+    "CMake": {
+      "Defines": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "NUMACTL_VERSION": "2.0.19"
+      }
+    }
+  },
+  "Package": {
+    "Name": "numactl",
+    "VersionTag": "v2.0.19",
+    "PlatformString": {
+      "Mode": "auto"
+    },
+    "IsLibrary": true,
+    "IsDevLib": true,
+    "IsDebug": false
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "fedora42"
+    ]
+  }
+}
