@@ -3,7 +3,7 @@
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/bringauto/boost-cmake-build.git",
-    "Revision": "master"
+    "Revision": "v1.1.0"
   },
   "Build": {
     "CMake": {
