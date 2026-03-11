@@ -21,7 +21,8 @@ RUN wget "https://github.com/Kitware/CMake/releases/download/v3.30.3/cmake-3.30.
 
 RUN dnf -y update && \
     dnf -y remove \
-      wget
+      wget \
+      numactl-libs
 
 RUN git clone https://github.com/cmakelib/cmakelib.git /cmakelib
 RUN echo "export CMLIB_DIR=/cmakelib" >> /root/.bashrc
