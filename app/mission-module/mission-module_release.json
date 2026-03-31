@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/bringauto/mission-module.git",
-    "Revision": "v1.3.0"
+    "Revision": "v1.3.1"
   },
   "Build": {
     "CMake": {
@@ -17,7 +17,7 @@
   },
   "Package": {
     "Name": "mission-module",
-    "VersionTag": "v1.3.0",
+    "VersionTag": "v1.3.1",
     "PlatformString": {
       "Mode": "auto"
     },
