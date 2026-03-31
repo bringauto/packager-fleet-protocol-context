@@ -9,7 +9,7 @@
   ],
   "Git": {
     "URI": "https://github.com/bringauto/fleet-protocol-http-client-cxx.git",
-    "Revision": "v2.0.1"
+    "Revision": "v2.0.2"
   },
   "Build": {
     "CMake": {
@@ -25,7 +25,7 @@
   },
   "Package": {
     "Name": "fleet-http-client-shared",
-    "VersionTag": "v2.0.1",
+    "VersionTag": "v2.0.2",
     "PlatformString": {
       "Mode": "auto"
     },
