@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/bringauto/module-gateway.git",
-    "Revision": "v1.3.5"
+    "Revision": "develop"
   },
   "Build": {
     "CMake": {
@@ -11,13 +11,14 @@
         "BRINGAUTO_INSTALL": "ON",
         "BRINGAUTO_PACKAGE": "ON",
         "BRINGAUTO_SYSTEM_DEP": "OFF",
-        "BRINGAUTO_TESTS": "OFF"
+        "BRINGAUTO_TESTS": "OFF",
+        "BRINGAUTO_SANITIZERS": "OFF"
       }
     }
   },
   "Package": {
     "Name": "module-gateway",
-    "VersionTag": "v1.3.5",
+    "VersionTag": "v1.4.0",
     "PlatformString": {
       "Mode": "auto"
     },
