@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/bringauto/module-gateway.git",
-    "Revision": "develop"
+    "Revision": "v1.4.1"
   },
   "Build": {
     "CMake": {
@@ -17,7 +17,7 @@
   },
   "Package": {
     "Name": "module-gateway",
-    "VersionTag": "v1.4.0",
+    "VersionTag": "v1.4.1",
     "PlatformString": {
       "Mode": "auto"
     },
