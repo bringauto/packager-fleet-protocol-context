@@ -28,7 +28,8 @@
   },
   "DockerMatrix": {
     "ImageNames": [
-      "fleet-os-3"
+      "fleet-os-3",
+      "fedora44"
     ]
   }
 }

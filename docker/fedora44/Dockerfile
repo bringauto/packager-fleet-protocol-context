@@ -1,0 +1,31 @@
+FROM fedora:44
+
+USER root
+RUN echo root:1234 | chpasswd
+
+RUN dnf -y update && \
+    dnf -y install  \
+    automake autoconf automake binutils cmake gcc gcc-c++ git kernel-devel libtool lsb-release make openssh-server openssl-devel patchelf perl-FindBin perl-IPC-Cmd \
+    && dnf clean all
+
+# Java is needed for build of some tools.
+# For example: Processing Aeron mapping files
+RUN dnf -y update && \
+    dnf -y install java-latest-openjdk java-latest-openjdk-devel \
+    && dnf clean all
+
+
+RUN git clone https://github.com/cmakelib/cmakelib.git /cmakelib
+RUN echo "export CMLIB_DIR=/cmakelib" >> /root/.bashrc
+
+# Install Fleet Protocol's CMCONF system
+COPY --from=package-context config/CMCONF_FLEET_PROTOCOLConfig.cmake /etc
+ENV CMLIB_DIR=/cmakelib
+RUN cmake -DCMCONF_INSTALL_AS_SYMLINK=ON -P /etc/CMCONF_FLEET_PROTOCOLConfig.cmake
+
+RUN sed -ri 's/#?PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN mkdir -p /run/sshd
+
+RUN ssh-keygen -A
+
+ENTRYPOINT ["/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]

@@ -40,7 +40,8 @@
       "ubuntu2404",
       "fleet-os-3",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "fedora44"
     ]
   }
 }

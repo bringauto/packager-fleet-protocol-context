@@ -10,7 +10,7 @@
   ],
   "Git": {
     "URI": "https://github.com/osmcode/libosmium.git",
-    "Revision": "v2.17.3"
+    "Revision": "v2.23.1"
   },
   "Build": {
     "CMake": {
@@ -24,7 +24,7 @@
   },
   "Package": {
     "Name": "osmium",
-    "VersionTag": "v2.17.3",
+    "VersionTag": "v2.23.1",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -40,7 +40,8 @@
       "ubuntu2404",
       "fedora40",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "fedora44"
     ]
   }
 }
