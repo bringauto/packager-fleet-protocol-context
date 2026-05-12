@@ -1,10 +1,9 @@
 {
-  "Env": {
-  },
+  "Env": {},
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/eclipse/paho.mqtt.c.git",
-    "Revision": "v1.3.9"
+    "Revision": "v1.3.16"
   },
   "Build": {
     "CMake": {
@@ -23,7 +22,7 @@
   },
   "Package": {
     "Name": "pahomqttc",
-    "VersionTag": "v1.3.9",
+    "VersionTag": "v1.3.16",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -39,7 +38,8 @@
       "ubuntu2404",
       "fedora40",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "fedora44"
     ]
   }
 }

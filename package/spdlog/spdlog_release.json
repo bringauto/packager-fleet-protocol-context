@@ -33,7 +33,8 @@
       "ubuntu2504",
       "fedora40",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "fedora44"
     ]
   }
 }
