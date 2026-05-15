@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/madler/zlib.git",
-    "Revision": "v1.2.11"
+    "Revision": "v1.3.2"
   },
   "Build": {
     "CMake": {
@@ -13,7 +13,7 @@
   },
   "Package": {
     "Name": "zlib",
-    "VersionTag": "v1.2.11",
+    "VersionTag": "v1.3.2",
     "PlatformString": {
       "Mode": "auto"
     },
@@ -30,7 +30,8 @@
       "ubuntu2404",
       "fedora40",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "fedora44"
     ]
   }
 }

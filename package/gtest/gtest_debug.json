@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/google/googletest.git",
-    "Revision": "v1.12.1"
+    "Revision": "release-1.12.1"
   },
   "Build": {
     "CMake": {
@@ -29,7 +29,8 @@
       "ubuntu2404",
       "fedora40",
       "fedora41",
-      "fedora42"
+      "fedora42",
+      "fedora44"
     ]
   }
 }
