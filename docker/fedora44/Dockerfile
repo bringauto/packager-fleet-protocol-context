@@ -5,7 +5,7 @@ RUN echo root:1234 | chpasswd
 
 RUN dnf -y update && \
     dnf -y install  \
-    automake autoconf automake binutils cmake gcc gcc-c++ git kernel-devel libtool lsb-release make openssh-server openssl-devel patchelf perl-FindBin perl-IPC-Cmd \
+    automake autoconf automake binutils gcc gcc-c++ git kernel-devel libtool lsb-release make openssh-server openssl-devel patchelf perl-FindBin perl-IPC-Cmd wget \
     && dnf clean all
 
 # Java is needed for build of some tools.
@@ -14,6 +14,10 @@ RUN dnf -y update && \
     dnf -y install java-latest-openjdk java-latest-openjdk-devel \
     && dnf clean all
 
+RUN wget "https://github.com/Kitware/CMake/releases/download/v4.3.0/cmake-4.3.0-linux-x86_64.sh" -O cmake.sh && \
+    chmod +x cmake.sh && \
+    ./cmake.sh --skip-license --prefix=/usr/local && \
+    rm ./cmake.sh
 
 RUN git clone https://github.com/cmakelib/cmakelib.git /cmakelib
 RUN echo "export CMLIB_DIR=/cmakelib" >> /root/.bashrc
