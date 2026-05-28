@@ -41,6 +41,4 @@ RUN cmake -DCMCONF_INSTALL_AS_SYMLINK=ON -P /etc/CMCONF_FLEET_PROTOCOLConfig.cma
 RUN sed -ri 's/#?PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN mkdir -p /run/sshd
 
-RUN ssh-keygen -A
-
-ENTRYPOINT ["/usr/sbin/sshd", "-D", "-o", "ListenAddress=0.0.0.0"]
+ENTRYPOINT ["/bin/sh", "-lc", "ls /etc/ssh/ssh_host_*_key >/dev/null 2>&1 || ssh-keygen -A; exec /usr/sbin/sshd -D -o ListenAddress=0.0.0.0"]
