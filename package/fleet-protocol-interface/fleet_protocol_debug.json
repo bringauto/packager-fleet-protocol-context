@@ -3,7 +3,7 @@
   "DependsOn": [],
   "Git": {
     "URI": "https://github.com/bringauto/fleet-protocol.git",
-    "Revision": "v2.0.0"
+    "Revision": "v2.1.0"
   },
   "Build": {
     "CMake": {
@@ -18,7 +18,7 @@
   },
   "Package": {
     "Name": "fleet-protocol-interface",
-    "VersionTag": "v2.0.0",
+    "VersionTag": "v2.1.0",
     "PlatformString": {
       "Mode": "auto"
     },
