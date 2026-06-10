@@ -2,7 +2,7 @@
   "Env": {},
   "Git": {
     "URI": "https://github.com/bringauto/transparent-module.git",
-    "Revision": "v1.0.3"
+    "Revision": "v1.0.6"
   },
   "Build": {
     "CMake": {
@@ -14,7 +14,7 @@
   },
   "Package": {
     "Name": "transparent-module",
-    "VersionTag": "v1.0.3",
+    "VersionTag": "v1.0.6",
     "PlatformString": {
       "Mode": "auto"
     },
