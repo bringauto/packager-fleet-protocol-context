@@ -1,0 +1,35 @@
+{
+  "Env": {},
+  "Git": {
+    "URI": "https://gitlab.bringauto.com/bring-auto/teleoperation/control/teleop-module.git",
+    "Revision": "v1.0.4"
+  },
+  "Build": {
+    "CMake": {
+      "Defines": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BRINGAUTO_INSTALL": "ON",
+        "FLEET_PROTOCOL_BUILD_MODULE_GATEWAY": "ON",
+        "FLEET_PROTOCOL_BUILD_EXTERNAL_SERVER": "ON"
+      }
+    }
+  },
+  "Package": {
+    "Name": "teleop-module",
+    "VersionTag": "v1.0.4",
+    "PlatformString": {
+      "Mode": "auto"
+    },
+    "IsLibrary": false,
+    "IsDevLib": false,
+    "IsDebug": true
+  },
+  "DockerMatrix": {
+    "ImageNames": [
+      "fleet-os-3",
+      "ubuntu2404",
+      "fedora44",
+      "debian12"
+    ]
+  }
+}
