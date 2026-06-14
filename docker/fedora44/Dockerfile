@@ -23,6 +23,12 @@ RUN wget "https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/c
      ./cmake.sh --skip-license --prefix=/usr/local && \
      rm ./cmake.sh
 
+# Necessary to remove numctl-libs, so msquic works
+RUN dnf -y update && \
+    dnf -y remove \
+      wget \
+      numactl-libs
+
 ARG CMLIB_VERSION=1.3.5
 RUN git clone --branch v${CMLIB_VERSION} --depth 1 https://github.com/cmakelib/cmakelib.git /cmakelib
 RUN echo "export CMLIB_DIR=/cmakelib" >> /root/.bashrc
